@@ -18,15 +18,13 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-2 group">
-            <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-              <MapPin className="h-5 w-5 text-primary" />
-            </div>
-            <span className="font-display font-bold text-xl tracking-tight text-foreground">
-              Lebon<span className="text-primary">Influ</span>
-            </span>
-          </a>
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+            <MapPin className="h-5 w-5 text-primary" />
+          </div>
+          <span className="font-display font-bold text-xl tracking-tight text-foreground">
+            Lebon<span className="text-primary">Influ</span>
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -43,19 +41,15 @@ export function Navbar() {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            <Link href="/auth/login">
-              <a className="font-medium">
-                <Button variant="ghost" className="font-medium">
-                  Se connecter
-                </Button>
-              </a>
+            <Link href="/auth/login" className="font-medium">
+              <Button variant="ghost" className="font-medium">
+                Se connecter
+              </Button>
             </Link>
-            <Link href="/auth/register">
-              <a className="font-medium">
-                <Button className="font-medium shadow-lg shadow-primary/20">
-                  Créer un compte
-                </Button>
-              </a>
+            <Link href="/auth/register" className="font-medium">
+              <Button className="font-medium shadow-lg shadow-primary/20">
+                Créer un compte
+              </Button>
             </Link>
           </div>
         </div>
@@ -83,19 +77,15 @@ export function Navbar() {
                   ))}
                 </div>
                 <div className="flex flex-col gap-3">
-                  <Link href="/auth/login">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Button variant="outline" className="w-full justify-center">
-                        Se connecter
-                      </Button>
-                    </a>
+                  <Link href="/auth/login" onClick={() => setIsOpen(false)}>
+                    <Button variant="outline" className="w-full justify-center">
+                      Se connecter
+                    </Button>
                   </Link>
-                  <Link href="/auth/register">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Button className="w-full justify-center">
-                        Créer un compte
-                      </Button>
-                    </a>
+                  <Link href="/auth/register" onClick={() => setIsOpen(false)}>
+                    <Button className="w-full justify-center">
+                      Créer un compte
+                    </Button>
                   </Link>
                 </div>
               </div>

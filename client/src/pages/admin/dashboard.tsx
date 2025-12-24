@@ -21,7 +21,7 @@ export default function AdminDashboard() {
 
   const filteredUsers = mockUsers.filter(user => {
     const matchSearch = user.name.toLowerCase().includes(searchUsers.toLowerCase());
-    const matchType = !filterType || user.type === filterType;
+    const matchType = !filterType || filterType === "all" || user.type === filterType;
     return matchSearch && matchType;
   });
 
@@ -30,15 +30,13 @@ export default function AdminDashboard() {
       {/* Header */}
       <div className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-2 group">
-              <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <MapPin className="h-5 w-5 text-primary" />
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-foreground">
-                Lebon<span className="text-primary">Influ</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+              <MapPin className="h-5 w-5 text-primary" />
+            </div>
+            <span className="font-display font-bold text-xl tracking-tight text-foreground">
+              Lebon<span className="text-primary">Influ</span>
+            </span>
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-sm font-medium">Admin Panel</span>
@@ -122,7 +120,7 @@ export default function AdminDashboard() {
                     <SelectValue placeholder="Tous les types" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Tous les types</SelectItem>
+                    <SelectItem value="all">Tous les types</SelectItem>
                     <SelectItem value="company">Entreprises</SelectItem>
                     <SelectItem value="influencer">Influenceurs</SelectItem>
                   </SelectContent>

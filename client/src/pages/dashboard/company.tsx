@@ -99,8 +99,8 @@ export default function CompanyDashboard() {
   const filteredInfluencers = mockInfluencers.filter(inf => {
     const matchSearch = inf.name.toLowerCase().includes(filters.search.toLowerCase()) ||
                        inf.handle.toLowerCase().includes(filters.search.toLowerCase());
-    const matchNiche = !filters.niche || inf.niche.includes(filters.niche);
-    const matchCity = !filters.city || inf.location.includes(filters.city);
+    const matchNiche = !filters.niche || filters.niche === "all" || inf.niche.includes(filters.niche);
+    const matchCity = !filters.city || filters.city === "all" || inf.location.includes(filters.city);
     return matchSearch && matchNiche && matchCity;
   });
 
@@ -113,15 +113,13 @@ export default function CompanyDashboard() {
       {/* Header */}
       <div className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-2 group">
-              <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <MapPin className="h-5 w-5 text-primary" />
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-foreground">
-                Lebon<span className="text-primary">Influ</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+              <MapPin className="h-5 w-5 text-primary" />
+            </div>
+            <span className="font-display font-bold text-xl tracking-tight text-foreground">
+              Lebon<span className="text-primary">Influ</span>
+            </span>
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-sm font-medium">Connecté en tant qu'Entreprise</span>
@@ -156,7 +154,7 @@ export default function CompanyDashboard() {
                     <SelectValue placeholder="Toutes les niches" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Toutes les niches</SelectItem>
+                    <SelectItem value="all">Toutes les niches</SelectItem>
                     <SelectItem value="Food">Food & Restos</SelectItem>
                     <SelectItem value="Sport">Sport & Bien-être</SelectItem>
                     <SelectItem value="Mode">Lifestyle & Mode</SelectItem>
@@ -174,7 +172,7 @@ export default function CompanyDashboard() {
                     <SelectValue placeholder="Toutes les villes" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Toutes les villes</SelectItem>
+                    <SelectItem value="all">Toutes les villes</SelectItem>
                     <SelectItem value="Paris">Paris</SelectItem>
                     <SelectItem value="Lyon">Lyon</SelectItem>
                     <SelectItem value="Nantes">Nantes</SelectItem>

@@ -37,19 +37,15 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mt-4">
-              <Link href="/auth/register">
-                <a className="w-full sm:w-auto">
-                  <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-primary/25 w-full">
-                    Trouver un influenceur
-                  </Button>
-                </a>
+              <Link href="/auth/register" className="w-full sm:w-auto">
+                <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-primary/25 w-full">
+                  Trouver un influenceur
+                </Button>
               </Link>
-              <Link href="/auth/register">
-                <a className="w-full sm:w-auto">
-                  <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-white/50 backdrop-blur w-full hover:bg-white/80">
-                    Je suis influenceur
-                  </Button>
-                </a>
+              <Link href="/auth/register" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-white/50 backdrop-blur w-full hover:bg-white/80">
+                  Je suis influenceur
+                </Button>
               </Link>
             </div>
 
