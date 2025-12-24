@@ -9,6 +9,10 @@ import LoginPage from "@/pages/auth/login";
 import RegisterPage from "@/pages/auth/register";
 import CompanyOnboardingPage from "@/pages/onboarding/company";
 import InfluencerOnboardingPage from "@/pages/onboarding/influencer";
+import DashboardViewPage from "@/pages/dashboard/index";
+import CompanyDashboard from "@/pages/dashboard/company";
+import InfluencerDashboard from "@/pages/dashboard/influencer";
+import AdminDashboard from "@/pages/admin/dashboard";
 
 function Router() {
   return (
@@ -18,6 +22,10 @@ function Router() {
       <Route path="/auth/register" component={RegisterPage} />
       <Route path="/onboarding/company" component={CompanyOnboardingPage} />
       <Route path="/onboarding/influencer" component={InfluencerOnboardingPage} />
+      <Route path="/view" component={DashboardViewPage} />
+      <Route path="/dashboard/company" component={CompanyDashboard} />
+      <Route path="/dashboard/influencer" component={InfluencerDashboard} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route component={NotFound} />
     </Switch>
   );
