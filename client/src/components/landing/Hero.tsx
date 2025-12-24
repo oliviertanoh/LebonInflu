@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Heart, Star, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 export function Hero() {
   return (
@@ -36,12 +37,20 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mt-4">
-              <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-primary/25 w-full sm:w-auto">
-                Trouver un influenceur
-              </Button>
-              <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-white/50 backdrop-blur w-full sm:w-auto hover:bg-white/80">
-                Je suis influenceur
-              </Button>
+              <Link href="/auth/register">
+                <a className="w-full sm:w-auto">
+                  <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-primary/25 w-full">
+                    Trouver un influenceur
+                  </Button>
+                </a>
+              </Link>
+              <Link href="/auth/register">
+                <a className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-white/50 backdrop-blur w-full hover:bg-white/80">
+                    Je suis influenceur
+                  </Button>
+                </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-6 justify-center lg:justify-start mt-8 text-sm text-muted-foreground">

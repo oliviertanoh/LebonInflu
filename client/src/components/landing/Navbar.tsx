@@ -43,12 +43,20 @@ export function Navbar() {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="ghost" className="font-medium">
-              Se connecter
-            </Button>
-            <Button className="font-medium shadow-lg shadow-primary/20">
-              Créer un compte
-            </Button>
+            <Link href="/auth/login">
+              <a className="font-medium">
+                <Button variant="ghost" className="font-medium">
+                  Se connecter
+                </Button>
+              </a>
+            </Link>
+            <Link href="/auth/register">
+              <a className="font-medium">
+                <Button className="font-medium shadow-lg shadow-primary/20">
+                  Créer un compte
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
 
@@ -75,12 +83,20 @@ export function Navbar() {
                   ))}
                 </div>
                 <div className="flex flex-col gap-3">
-                  <Button variant="outline" className="w-full justify-center">
-                    Se connecter
-                  </Button>
-                  <Button className="w-full justify-center">
-                    Créer un compte
-                  </Button>
+                  <Link href="/auth/login">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Button variant="outline" className="w-full justify-center">
+                        Se connecter
+                      </Button>
+                    </a>
+                  </Link>
+                  <Link href="/auth/register">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Button className="w-full justify-center">
+                        Créer un compte
+                      </Button>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </SheetContent>
