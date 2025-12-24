@@ -1,0 +1,103 @@
+Tu es un expert UI/UX + dev front. Je veux que tu génères la landing page (partie visible) de mon SaaS français qui s’appelle “LebonInflu”, inspiré de l’esprit “Leboncoin” (simple, direct, français), mais moderne.
+
+CONTEXTE PROJET
+LebonInflu = plateforme simple de mise en relation entre entreprises locales (restaurants, salles de sport, salons, bars, boutiques, événements, etc.) et influenceurs / créateurs UGC (TikTok, Instagram, YouTube). Objectif : permettre à une entreprise de trouver rapidement des influenceurs dans sa ville et dans une niche précise, voir leurs exemples de pubs, leurs stats clés, leurs tarifs, puis les contacter.
+
+CIBLE
+- Côté “Annonceurs” : petites entreprises locales qui n’ont pas le budget des plateformes chères.
+- Côté “Influenceurs” : micro-influenceurs + créateurs UGC qui veulent être trouvés facilement et montrer leurs offres.
+
+STYLE VISUEL À RESPECTER
+- Design clean, très lisible, “France / local”, inspiré leboncoin : simplicité + confiance.
+- Moderne : bords arrondis, ombres légères, beaucoup d’espace blanc.
+- Palette : fond clair, éléments accent en orange/jaune doux (rappel leboncoin) + gris/bleu foncé pour texte. Ne pas faire criard.
+- Typo : sans-serif moderne.
+- Responsive mobile first.
+
+OBJECTIF DE CETTE PAGE
+Je veux UNIQUEMENT la landing (pas le SaaS complet). Elle doit donner envie et expliquer immédiatement.
+Je veux un site statique (ou Next.js/Vite/React si tu préfères) mais simple, rapide, SEO-friendly.
+Ajoute des sections claires + CTA.
+
+STRUCTURE OBLIGATOIRE DE LA LANDING PAGE
+1) Header sticky
+   - Logo “LebonInflu” (texte + icône simple)
+   - Menu: Comment ça marche / Tarifs / Pour les influenceurs / FAQ
+   - Boutons: “Se connecter” (secondaire) + “Créer un compte” (primaire)
+
+2) Hero section (above the fold)
+   - Titre fort : “Trouvez des influenceurs locaux en quelques minutes.”
+   - Sous-titre : “Par ville, par niche, par budget. Contact direct. Simple.”
+   - 2 CTA : “Trouver un influenceur” (primaire) + “Je suis influenceur” (secondaire)
+   - À droite : un visuel type “mockup” (carte / liste d’influenceurs) avec 3 cartes influenceurs (ex: Food Nantes, Sport Paris, Lifestyle Lyon) contenant:
+       * photo placeholder
+       * nom/prénom
+       * niche
+       * ville
+       * abonnés
+       * engagement %
+       * prix “à partir de”
+       * 2 tags (ex: “UGC”, “Reels”)
+
+3) Section “Recherche simple”
+   - Une barre de recherche (non fonctionnelle) avec filtres UI:
+     Ville (dropdown), Niche (dropdown), Budget (slider), Plateforme (chips)
+   - Une phrase rassurante: “Pas d’agence, pas de blabla : vous contactez directement.”
+
+4) Section “Comment ça marche” (3 étapes)
+   - 1. Cherchez par ville & niche
+   - 2. Comparez profils, exemples & prix
+   - 3. Contactez et lancez la collab
+   - Ajoute des icônes simples + micro-copies.
+
+5) Section “Pourquoi LebonInflu”
+   - 4 cartes bénéfices:
+     * Local & rapide
+     * Tarifs transparents
+     * Micro-influenceurs & UGC
+     * Simple comme une annonce
+
+6) Section “Exemples de pubs”
+   - Grille de 6 vignettes placeholder (format vertical TikTok/Reels)
+   - Chaque vignette: niche + ville + mini description
+
+7) Section “Tarifs” (à proposer)
+   Je veux 2 offres (adaptées à mon souci d’abonnement):
+   - “Pass 30 jours” : accès complet + contact illimité pendant 30 jours (prix accessible)
+   - “Pay-per-contact” : paiement à l’unité pour débloquer un contact
+   + Option gratuite: consulter une partie des profils mais infos masquées (nom/contacts masqués).
+   Fais une proposition de prix réaliste en euros (ex: 19–49€) et justifie par du texte marketing (sans faire trop long).
+   Ajoute un encart “Influenceurs : inscription gratuite”.
+
+8) Section “Pour les influenceurs”
+   - Explique: créer profil, ajouter exemples, fixer prix, recevoir demandes.
+   - CTA: “Créer mon profil influenceur”
+
+9) FAQ (6 questions)
+   - “Est-ce une agence ?”
+   - “Comment sont vérifiés les influenceurs ?”
+   - “Puis-je filtrer par ville ?”
+   - “Comment se passe le paiement ?” (réponse: “hors plateforme pour l’instant” ou “à venir”)
+   - “Puis-je voir des exemples ?”
+   - “Influenceur : comment je fixe mes tarifs ?”
+
+10) Footer
+   - Liens: Mentions légales, CGU, Confidentialité, Contact
+   - Réseaux sociaux placeholders
+   - Phrase: “LebonInflu — La mise en relation simple entre marques locales et créateurs.”
+
+CONTRAINTES TECHNIQUES
+- Génère le code complet prêt à run dans Replit.
+- Aucun besoin de backend. Tout statique.
+- Utilise des composants réutilisables (Cards, Buttons).
+- Ajoute de petites animations (hover, fade-in léger) mais pas lourd.
+- Optimise accessibilité (contrastes, aria-label).
+- Ajoute meta title/description pour SEO.
+
+CONTENU EN FRANÇAIS
+Tout le texte doit être en français, ton simple, direct, “français de tous les jours” mais pro.
+
+LIVRABLE
+1) Le code complet de la landing page.
+2) Indique comment lancer le projet (ex: npm install + npm run dev).
+3) Si tu utilises un framework, choisis le plus simple pour Replit.
